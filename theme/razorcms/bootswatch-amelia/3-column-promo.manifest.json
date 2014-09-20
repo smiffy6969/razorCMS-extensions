@@ -1,0 +1,14 @@
+{
+	"manifest": "3-column-promo",
+	"type": "theme",
+	"handle": "razorcms",
+	"extension": "bootswatch-amelia",
+	"layout": "3-column-promo",
+	"name": "Bootswatch Amelia",
+	"author": "smiffy6969",
+	"version": 2,
+	"created": 1394394028,
+	"description": "Conversion of the amelia theme from bootswatch.com.",
+	"menus": ["header","footer"],
+	"content": {"header": 1,"main": 4,"footer": 1}
+}

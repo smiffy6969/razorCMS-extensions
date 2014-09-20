@@ -1,0 +1,25 @@
+<div class="modal-header">
+	<h3>Upload Photo Gallery Images <i class="fa fa-times pull-right" ng-click="cancel()"></i></h3>
+</div>
+<div class="modal-body photo-razorcms-photo-gallery-manager">	
+	<p ng-if="albumName.length < 1" class="alert alert-danger">You do not have an album name set, please edit the page and add an album name to the photo gallery extension.</p>
+	<div ng-if="albumName.length > 0" class="manage-images" ng-init="loadImages()">
+		<div class="image-upload">
+			<form role="form" name="form" enctype="multipart/form-data" novalidate>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-btn">
+							<span class="btn btn-default btn-file">
+								<i class="fa fa-folder-open"></i> Multi Select <input type="file" rzr-file-model="$parent.$parent.newImages" multiple>
+							</span>
+						</span>
+						<span class="form-control">{{(overLimit() ? 'Can only upload 8Mb at a time!' : newImages.length > 1 ? newImages.length + ' files selected' : newImages[0].name)}}</span>
+						<span class="input-group-btn">
+							<button class="btn btn-default" ng-click="uploadImages()" ng-disabled="!newImages || newImages.length < 1 || overLimit()"> Upload</button>
+						</span>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

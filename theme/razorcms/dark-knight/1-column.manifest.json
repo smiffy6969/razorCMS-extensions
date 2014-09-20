@@ -1,0 +1,14 @@
+{
+	"manifest": "1-column",
+	"type": "theme",
+	"handle": "razorcms",
+	"extension": "dark-knight",
+	"layout": "1-column",
+	"name": "Dark Knight",
+	"author": "smiffy6969",
+	"version": 3,
+	"created": 1394394028,
+	"description": "Dark theme, simple but elegant, side menu changes to top on mobile.",
+	"menus": ["main","footer"],
+	"content": {"header": 2,"main": 1,"footer": 2}
+}

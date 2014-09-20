@@ -1,0 +1,187 @@
+// this is where we put theme specific style
+body
+{
+	background-color: #444;
+
+	.template-wrapper
+	{
+
+		.template-header
+		{
+			background-color: #444;
+			padding-top: 20px;
+			padding-bottom: 10px;
+			color: #eee;
+		
+			.template-header-menu
+			{
+				margin-bottom: 20px;
+
+				.nav
+				{
+					li
+					{
+						a 
+						{ 
+							color: #eee; 
+							border-radius: 2px;
+							background-color: #888;
+						}
+
+						&:hover
+						{
+							a 
+							{ 
+								color: #eee; 
+								background-color: #777;
+							}
+						}
+
+						&.active
+						{	
+							a 
+							{ 
+								color: #eee; 
+								background-color: #555;
+							}
+
+							&:hover
+							{
+								a 
+								{ 
+									color: #eee; 
+									background-color: #555;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.template-main
+		{
+			padding-top: 20px;
+			padding-bottom: 20px;
+			background-color: #444;
+			color: #eee;
+
+			.nav
+			{
+				li
+				{
+					a 
+					{ 
+						color: #eee; 
+						border-radius: 2px;
+						background-color: #888;
+					}
+
+					&:hover
+					{
+						a 
+						{ 
+							color: #eee; 
+							background-color: #777;
+						}
+					}
+
+					&.active
+					{	
+						a 
+						{ 
+							color: #eee; 
+							background-color: #555;
+						}
+
+						&:hover
+						{
+							a 
+							{ 
+								color: #eee; 
+								background-color: #555;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.template-footer
+		{
+			padding-top: 20px;
+			background-color: #444;
+			color: #eee;
+
+			.template-footer-menu
+			{
+				ul
+				{
+					margin: 0px;
+					padding: 0px;
+					list-style-type: none;
+				
+					li
+					{
+						float: left;
+						margin-bottom: 20px;
+
+						a
+						{
+							margin-right: 20px;
+							color: #eee;
+						}
+
+						&:hover
+						{
+							a 
+							{ 
+								color: #eee;
+								background-color: transparent;
+							}
+						}
+
+						&.active
+						{	
+							a 
+							{ 
+								color: #eee;
+								background-color: transparent;
+							}
+
+							&:hover
+							{
+								a 
+								{ 
+									color: #eee;
+									background-color: transparent;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.nicEdit-main, .content-block, .content-view { background-color: #444 !important; }
+
+	// bootstrap overrides for the dark theme
+	.table 
+	{ 
+		background-color: #fff; 
+		color: #444;
+
+		th 
+		{ 
+			background-color: #444;
+			color: #eee;
+		}
+	}
+
+	.well
+	{
+		background-color: #666;
+		border-color: #999;
+	}
+}

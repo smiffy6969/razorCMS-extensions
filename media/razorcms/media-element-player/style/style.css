@@ -1,0 +1,13 @@
+.media-razorcms-media-element-player{text-align:center}.media-razorcms-media-element-player .player{width:400px}.media-razorcms-media-element-player .player .playlist{border:1px solid #000;width:100%;background-color:#fff}.media-razorcms-media-element-player .player .playlist .track-listing{cursor:pointer}.media-razorcms-media-element-player .player .playlist .track-listing .index{padding:2px;text-align:left}
+.media-razorcms-media-element-player .player .playlist .track-listing .name{padding:2px;text-align:left}
+.media-razorcms-media-element-player .player .playlist .track-listing:hover{background-color:#f4f4f4}
+.media-razorcms-media-element-player .player.grey .mejs-controls{background:#aaa}
+.media-razorcms-media-element-player .player.grey .playlist{border-color:#aaa}
+.media-razorcms-media-element-player .player.red .mejs-controls{background:#c21a1a}
+.media-razorcms-media-element-player .player.red .playlist{border-color:#c21a1a}
+.media-razorcms-media-element-player .player.blue .mejs-controls{background:#446494}
+.media-razorcms-media-element-player .player.blue .playlist{border-color:#446494}
+.media-razorcms-media-element-player .player.green .mejs-controls{background:#579444}
+.media-razorcms-media-element-player .player.green .playlist{border-color:#579444}
+.media-razorcms-media-element-player .mejs-container{width:100% !important}.media-razorcms-media-element-player .mejs-container .mejs-mediaelement{text-align:center !important}.media-razorcms-media-element-player .mejs-container .mejs-mediaelement video{width:100% !important}
+.media-razorcms-media-element-player .mejs-container .mejs-overlay-play{position:static !important}

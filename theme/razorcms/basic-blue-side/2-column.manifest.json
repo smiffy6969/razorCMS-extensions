@@ -1,0 +1,14 @@
+{
+	"manifest": "2-column",
+	"type": "theme",
+	"handle": "razorcms",
+	"extension": "basic-blue-side",
+	"layout": "2-column",
+	"name": "Basic Blue with Side Menu",
+	"author": "smiffy6969",
+	"version": 3,
+	"created": 1394394028,
+	"description": "Gives a basic blue fluid layout with a side navigation, turning to top nav for mobile layout.",
+	"menus": ["main","footer"],
+	"content": {"header": 2,"main": 2,"footer": 2}
+}

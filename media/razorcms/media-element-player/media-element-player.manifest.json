@@ -1,0 +1,20 @@
+{
+	"manifest": "media-element-player",
+	"type": "media",
+	"handle": "razorcms",
+	"extension": "media-element-player",
+	"name": "Media Element Player",
+	"author": "smiffy6969",
+	"version": 1,
+	"created": 1394394028,
+	"view" : "media-element-player",
+	"description": "Play audio/video from a specific folder using a playlist or single track.",
+	"content_settings": [
+		{"name": "playlist_name", "label": "Playlist Name", "placeholder": "Folder name for your tracks", "value": "", "regex": "/^[a-zA-Z0-9-_]+$/"},
+		{"name": "track_name", "label": "Track File Name", "placeholder": "Play a single track/file only (e.g. test.mp3)", "value": "", "regex": "/^[a-zA-Z0-9-_.]+$/"},
+		{"name": "media_type", "label": "Media Type", "placeholder": "Media type (e.g. mp3, mp4, ogg)", "value": ".mp3", "regex": "/^[a-zA-Z0-9-_.]+$/"},
+		{"name": "player_colour", "label": "Player Colour", "placeholder": "Player Colour (e.g. red, green, blue, grey or empty for black)", "value": "", "regex": "/^[a-zA-Z]+$/"},
+		{"name": "player_justify", "label": "Player Justify", "placeholder": "Player Justification (e.g. left, center, right)", "value": "center", "regex": "/^[a-zA-Z]+$/"},
+		{"name": "player_width", "label": "Player Width", "placeholder": "Player Width (e.g. 300px, 100%)", "value": "", "regex": "/^[0-9a-z%]+$/"}
+	]
+}

@@ -1,0 +1,6 @@
+#communication-razorcms-contact-form .message-sent {
+  opacity: 0.5;
+}
+#communication-razorcms-contact-form textarea {
+  height: 150px;
+}

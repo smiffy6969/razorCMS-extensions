@@ -1,0 +1,14 @@
+{
+	"manifest": "3-column",
+	"type": "theme",
+	"handle": "razorcms",
+	"extension": "default-extra",
+	"layout": "3-column",
+	"name": "Default Extra",
+	"author": "smiffy6969",
+	"version": 3,
+	"created": 1394394028,
+	"description": "Variation of the clean default theme.",
+	"menus": ["header","footer"],
+	"content": {"header": 3,"main": 3,"footer": 3}
+}

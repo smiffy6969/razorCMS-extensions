@@ -1,0 +1,16 @@
+{
+	"manifest": "google-adsense",
+	"type": "advertising",
+	"handle": "razorcms",
+	"extension": "google-adsense",
+	"name": "Google AdSense",
+	"author": "smiffy6969",
+	"version": 1,
+	"created": 1394394028,
+	"view" : "google-adsense",
+	"description": "Add Google AdSense adverts to your page, this requires a Google AdSense account, uses asynchronous only. Simple get your asynchronous adsense code, copy the part that looks like <ins class='adsbygoogle' style='display:inline-block;width:728px;height:90px' data-ad-client='ca-pub-1234567890123456' data-ad-slot='2345678990'></ins> and paste it into the 'INS Element' input box, when adding the extension to a page.",
+	"content_settings": [
+		{"name": "ins_element", "label": "INS Element", "placeholder": "The INS element copied from your asynch google code", "value": ""},
+		{"name": "class", "label": "Class Names", "placeholder": "Add classes (text-left text-right text-center mobile-show-block mobile-hide-block)", "value": "text-center mobile-hide-block"}
+	]
+}

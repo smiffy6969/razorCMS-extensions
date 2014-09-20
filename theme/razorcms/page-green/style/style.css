@@ -1,0 +1,13 @@
+body{background-color:#fff;background:url(../images/stripes.png) top left repeat;padding-bottom:1px}@media (min-width:830px){body .template-wrapper .template-page{margin:50px;box-shadow:0 0 5px 2px rgba(0,0,0,0.3)}}body .template-wrapper .template-page a{color:#18c047}body .template-wrapper .template-page a:hover{color:#05ad34}
+body .template-wrapper .template-page .template-header{background-color:#18c047;padding-top:20px;padding-bottom:10px;color:#d7f1df}body .template-wrapper .template-page .template-header .template-header-menu{margin-bottom:20px}body .template-wrapper .template-page .template-header .template-header-menu .nav li a{color:#18c047;border-radius:2px;background-color:#fff}
+body .template-wrapper .template-page .template-header .template-header-menu .nav li:hover a{color:#fff;background-color:#3bce64}
+body .template-wrapper .template-page .template-header .template-header-menu .nav li.active a{color:#fff;background-color:#3bce64}
+body .template-wrapper .template-page .template-header .template-header-menu .nav li.active:hover a{color:#fff;background-color:#3bce64}
+body .template-wrapper .template-page .template-main{padding-top:20px;padding-bottom:20px;background-color:#fff}body .template-wrapper .template-page .template-main .nav li a{color:#18c047;border-radius:2px}
+body .template-wrapper .template-page .template-main .nav li:hover a{color:#fff;background-color:#3bce64}
+body .template-wrapper .template-page .template-main .nav li.active a{color:#fff;background-color:#18c047}
+body .template-wrapper .template-page .template-main .nav li.active:hover a{color:#fff;background-color:#3bce64}
+body .template-wrapper .template-page .template-footer{padding-top:20px;background-color:#fff;border-top:1px solid #e2e2e2}body .template-wrapper .template-page .template-footer .template-footer-menu ul{margin:0;padding:0;list-style-type:none}body .template-wrapper .template-page .template-footer .template-footer-menu ul li{float:left;margin-bottom:20px}body .template-wrapper .template-page .template-footer .template-footer-menu ul li a{margin-right:20px;color:#18c047}
+body .template-wrapper .template-page .template-footer .template-footer-menu ul li:hover a{color:#18c047;background-color:transparent}
+body .template-wrapper .template-page .template-footer .template-footer-menu ul li.active a{color:#18c047;background-color:transparent}
+body .template-wrapper .template-page .template-footer .template-footer-menu ul li.active:hover a{color:#18c047;background-color:transparent}

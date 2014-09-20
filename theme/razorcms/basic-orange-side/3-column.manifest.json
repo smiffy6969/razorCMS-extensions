@@ -1,0 +1,14 @@
+{
+	"manifest": "3-column",
+	"type": "theme",
+	"handle": "razorcms",
+	"extension": "basic-orange-side",
+	"layout": "3-column",
+	"name": "Basic Orange with Side Menu",
+	"author": "smiffy6969",
+	"version": 3,
+	"created": 1394394028,
+	"description": "Gives a basic orange fluid layout with a side navigation, turning to top nav for mobile layout.",
+	"menus": ["main","footer"],
+	"content": {"header": 2,"main": 3,"footer": 2}
+}

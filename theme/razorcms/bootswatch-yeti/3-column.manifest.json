@@ -1,0 +1,14 @@
+{
+	"manifest": "3-column",
+	"type": "theme",
+	"handle": "razorcms",
+	"extension": "bootswatch-yeti",
+	"layout": "3-column",
+	"name": "Bootswatch Yeti",
+	"author": "smiffy6969",
+	"version": 2,
+	"created": 1394394028,
+	"description": "Conversion of the yeti theme from bootswatch.com.",
+	"menus": ["header","footer"],
+	"content": {"header": 3,"main": 3,"footer": 3}
+}

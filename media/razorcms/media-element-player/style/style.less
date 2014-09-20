@@ -1,0 +1,76 @@
+.media-razorcms-media-element-player
+{
+	text-align: center;
+
+	.player
+	{
+		width: 400px;
+
+		.playlist
+		{
+			border: 1px solid #000;
+			width: 100%;
+			background-color: #fff;
+
+			.track-listing
+			{
+				cursor: pointer;
+
+				.index
+				{
+					padding: 2px;
+					text-align: left;
+				}
+
+				.name
+				{
+					padding: 2px;
+					text-align: left;
+				}
+
+				&:hover { background-color: #f4f4f4; }
+			}
+		}
+
+		&.grey
+		{
+			.mejs-controls { background: #aaa; }
+			.playlist { border-color: #aaa; }
+		}
+
+		&.red
+		{
+			.mejs-controls { background: #C21A1A; }
+			.playlist { border-color: #C21A1A; }
+		}
+
+		&.blue
+		{
+			.mejs-controls { background: #446494; }
+			.playlist { border-color: #446494; }
+		}
+
+		&.green
+		{
+			.mejs-controls { background: #579444; }
+			.playlist { border-color: #579444; }
+		}
+	}
+
+	.mejs-container 
+	{ 
+		width: 100% !important; 
+
+		.mejs-mediaelement
+		{
+			text-align: center !important;
+
+			video { width: 100% !important; }
+		}
+
+		.mejs-overlay-play
+		{
+			position: static !important;
+		}
+	}
+}

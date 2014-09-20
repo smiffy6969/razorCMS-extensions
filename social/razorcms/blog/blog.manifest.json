@@ -1,0 +1,19 @@
+{
+	"manifest": "blog",
+	"type": "social",
+	"handle": "razorcms",
+	"extension": "blog",
+	"name": "Blog",
+	"author": "smiffy6969",
+	"version": 1,
+	"created": 1408983125,
+	"view" : "blog",
+	"description": "Blog",
+	"content_settings": [
+		{"name": "blog_name", "label": "Blog Name", "placeholder": "Give your blog a name", "value": "my-blog", "regex": "/^[a-zA-Z0-9-_]+$/"},
+		{"name": "blog_error", "label": "Blog Error Message", "placeholder": "The error message to show when no blog found", "value": "Could not find blog entry.", "regex": ""},
+		{"name": "view_blogs_label", "label": "View All Blogs Button Label", "placeholder": "The label on the button", "value": "View All Blogs", "regex": ""},
+		{"name": "show_more_label", "label": "Show More Button Label", "placeholder": "The label on the button", "value": "Show More", "regex": ""},
+		{"name": "disqus_shortname", "label": "Your Disqus Short Name", "placeholder": "Disquss comments, register @ http://docs.disqus.com/help/4", "value": "", "regex": ""}
+	]
+}

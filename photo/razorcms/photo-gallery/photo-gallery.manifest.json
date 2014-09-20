@@ -1,0 +1,17 @@
+{
+	"manifest": "photo-gallery",
+	"type": "photo",
+	"handle": "razorcms",
+	"extension": "photo-gallery",
+	"name": "Photo Gallery",
+	"author": "smiffy6969",
+	"version": 2,
+	"created": 1394394028,
+	"view" : "photo-gallery",
+	"description": "Show photos from a specific folder as a photo gallery slideshow, login with manager or above permissions to add and remove images.",
+	"content_settings": [
+		{"name": "album_name", "label": "Album Name", "placeholder": "Folder name for your photos", "value": "", "regex": "/^[a-zA-Z0-9-_]+$/"},
+		{"name": "frame_height", "label": "Frame Height", "placeholder": "Height of frame (e.g. 300px or 75%)", "value": "300px", "regex": "/^[0-9a-z%]+$/"},
+		{"name": "frame_width", "label": "Frame Width", "placeholder": "Width of frame (e.g. 300px)", "value": "", "regex": "/^[0-9a-z%]+$/"}
+	]
+}

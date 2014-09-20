@@ -1,0 +1,14 @@
+{
+	"manifest": "1-column-main",
+	"type": "theme",
+	"handle": "razorcms",
+	"extension": "clean-red",
+	"layout": "1-column-main",
+	"name": "Simple Clean Red",
+	"author": "smiffy6969",
+	"version": 4,
+	"created": 1394394028,
+	"description": "Based on the razorCMS V3 website, this theme offers a simple interface with a red theme.",
+	"menus": ["header","footer"],
+	"content": {"header": 1,"main": 1,"footer": 2}
+}
