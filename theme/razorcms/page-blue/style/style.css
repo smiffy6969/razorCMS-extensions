@@ -1,4 +1,5 @@
-body{background-color:#fff;background:url(../images/stripes.png) top left repeat;padding-bottom:1px}@media (min-width:830px){body .template-wrapper .template-page{margin:50px;box-shadow:0 0 5px 2px rgba(0,0,0,0.3)}}body .template-wrapper .template-page a{color:#6987b4}body .template-wrapper .template-page a:hover{color:#265077}
+body{background-color:#fff;background:url(../images/stripes.png) top left repeat;padding-bottom:1px}body .razor-admin-dashboard{top:0}
+@media (min-width:830px){body .template-wrapper .template-page{margin:50px;box-shadow:0 0 5px 2px rgba(0,0,0,0.3)}}body .template-wrapper .template-page a{color:#6987b4}body .template-wrapper .template-page a:hover{color:#265077}
 body .template-wrapper .template-page .template-header{background-color:#265077;padding-top:20px;padding-bottom:10px;color:#d7f1df}body .template-wrapper .template-page .template-header .template-header-menu{margin-bottom:20px}body .template-wrapper .template-page .template-header .template-header-menu .nav li a{color:#265077;border-radius:2px;background-color:#fff}
 body .template-wrapper .template-page .template-header .template-header-menu .nav li:hover a{color:#cbdff7;background-color:#6987b4}
 body .template-wrapper .template-page .template-header .template-header-menu .nav li.active a{color:#cbdff7;background-color:#6987b4}

@@ -6,7 +6,7 @@
 	"layout": "2-column",
 	"name": "Page Green with Side Menu",
 	"author": "smiffy6969",
-	"version": 3,
+	"version": 4,
 	"created": 1394394028,
 	"description": "Gives a page type layout, green with a side navigation, turning to top nav for mobile layout.",
 	"menus": ["main","footer"],
