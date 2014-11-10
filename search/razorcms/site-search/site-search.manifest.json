@@ -1,0 +1,13 @@
+{
+	"manifest": "site-search",
+	"type": "search",
+	"handle": "razorcms",
+	"extension": "site-search",
+	"name": "Site Search",
+	"author": "smiffy6969",
+	"version": 2,
+	"created": 1394394028,
+	"view" : "site-search",
+	"description": "Search the pages on your website and return a list of pages matching the search terms. Results are ordered by relevance, based on a scoring system.",
+	"content_settings": []
+}
