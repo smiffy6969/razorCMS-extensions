@@ -12,36 +12,38 @@
 
 class ExtensionSocialRazorcmsBlogItem extends RazorAPI
 {
+	private $db = null;
+
 	function __construct()
 	{
 		// REQUIRED IN EXTENDED CLASS TO LOAD DEFAULTS
 		parent::__construct();
+
+		// open extension db and attach razor db
+		$this->db = new RazorPDO('sqlite:'.RAZOR_BASE_PATH.'storage/database/social_razorcms_blog.sqlite');
+		$this->db->exec('ATTACH "'.RAZOR_BASE_PATH.'storage/database/razorcms.sqlite" AS razor');
 	}
 
 	// get blog item or items
 	public function get($id)
 	{
-		// filter data
-		$blog_id = (!empty($id) ? (int) $id : null);
+		$query = 'SELECT a.id, a.access_level'
+			.', a.active'
+			.', a.blog_id'
+			.', a.content'
+			.', a.title'
+			.', a.published'
+			.', a.user_id'
+			.', b.name as "user_id.name"'
+			.' FROM blog_item AS a'
+			.' JOIN razor.user AS b ON b.id = a.user_id'
+			.' WHERE a.id = :id';
+		$item = $this->db->query_first($query, array(':id' => (int) $id));
 
-		// grab blog items
-		$db = new RazorDB();
-		$db->connect("extension_razorcms_blog_item");
-
-		// set options
-		$options = array(
-			"join" => array("table" => "user", "join_to" => "user_id"),
-			"filter" => array("id", "access_level", "active", "blog_id", "content", "title", "published", "user_id", "user_id.name")
-		);
-		if ($blog_id) $search = array("column" => "id", "value" => $blog_id);
-		else $search = array("column" => "id", "value" => null, "not" => true);
-		$items = $db->get_rows($search, $options);
-		$db->disconnect(); 
-
-		if ($items["count"] < 1) $this->response("Blog item not found", null, 400);
+		if (empty($item)) $this->response("Blog item not found", null, 400);
 
 		// json encode
-		$this->response(($blog_id ? $items["result"][0] : $items["result"]), "json");
+		$this->response($item, "json");
 	}
 
 	// save/update blog item
@@ -53,43 +55,29 @@ class ExtensionSocialRazorcmsBlogItem extends RazorAPI
 
 		// filter data
 		$data["blog_name"] = preg_replace("/[^a-zA-Z0-9-_]/", "", $data["blog_name"]);
-
-		$db = new RazorDB();
 		
 		if (isset($data["item"]["id"]))
 		{
 			// update, check can edit
 			if ((int) $this->check_access() < 7) $this->response(null, null, 401);
 		
-			// edit item
-			$db->connect("extension_razorcms_blog_item");
-			$search = array("column" => "id", "value" => $data["item"]["id"]);
-			$items = $db->edit_rows($search, array(
-				"title" => $data["item"]["title"],
-				"content" => $data["item"]["content"],
-				"updated" => time(),
-				"active" => true,
-				"user_id" => $this->user["id"]
-			));
-			$db->disconnect(); 
-			if ($items["count"] != 1) $this->response("Blog item not found", null, 404);
-
-			$id = $data["item"]["id"];
+			$row = array(
+				'title' => $data['item']['title'],
+				'content' => $data['item']['content'],
+				'updated' => time(),
+				'active' => 1,
+				'user_id' => $this->user['id']
+			);
+			$id = $this->db->edit_data('blog_item', $row, array('id' => $data["item"]["id"]), array('id'));
+			if (empty($id)) $this->response("Blog item not found", null, 404);
 		}
 		else
 		{
-			// grab blog
-			$db->connect("extension_razorcms_blog");
-			$search = array("column" => "name", "value" => $data["blog_name"]);
-			$blogs = $db->get_rows($search);
-			$db->disconnect(); 
-		
-			if ($blogs["count"] != 1) $this->response("Blog name not found", null, 404);
+			$blog = $this->db->get_first('blog', array('id'), array('name' => $data['blog_name']));
+			if (empty($blog)) $this->response("Blog name not found", null, 404);
 
-			// new item
-			$db->connect("extension_razorcms_blog_item");
 			$row = array(
-				"blog_id" => $blogs["result"][0]["id"],
+				"blog_id" => $blog['id'],
 				"active" => true,
 				"user_id" => $this->user["id"],
 				"published" => time(),
@@ -98,23 +86,24 @@ class ExtensionSocialRazorcmsBlogItem extends RazorAPI
 				"content" => $data["item"]["content"],
 				"access_level" => 0,
 			);
-			$items = $db->add_rows($row);
-
-			$id = $items["result"][0]["id"];
+			$id = $this->db->add_data('blog_item', $row, array('id'));
 		}
 
-		// return item
-		$db->connect("extension_razorcms_blog_item");
-		$options = array(
-			"amount" => 1,
-			"join" => array("table" => "user", "join_to" => "user_id")
-		);
-		$search = array("column" => "id", "value" => $id);
-		$items = $db->get_rows($search, $options);
-		$db->disconnect(); 
+		$query = 'SELECT a.id, a.access_level'
+			.', a.active'
+			.', a.blog_id'
+			.', a.content'
+			.', a.title'
+			.', a.published'
+			.', a.user_id'
+			.', b.name as "user_id.name"'
+			.' FROM blog_item AS a'
+			.' JOIN razor.user AS b ON b.id = a.user_id'
+			.' WHERE a.id = :id';
+		$item = $this->db->query_first($query, array(':id' => (int) $id[0]['id']));
 
 		// json encode
-		$this->response($items["result"][0], "json");
+		$this->response($item, "json");
 	}
 
 	// delete blog item
@@ -123,18 +112,9 @@ class ExtensionSocialRazorcmsBlogItem extends RazorAPI
 		if ((int) $this->check_access() < 8) $this->response(null, null, 401);
 		if (empty($id)) $this->response("Blog id missing", null, 400);
 
-		// filter data
-		$blog_id = (!empty($id) ? (int) $id : null);
-
-		// grab blog items
-		$db = new RazorDB();
-		$db->connect("extension_razorcms_blog_item");
-		$search = array("column" => "id", "value" => $blog_id);
-		$db->delete_rows($search);
-		$db->disconnect(); 
+		$this->db->delete_data('blog_item', array('id' => (int) $id));
 
 		// json encode
 		$this->response("success", "json");
 	}
-
 }

@@ -2,10 +2,8 @@
 
 <?php
 	// create any new db files
-	$blog_db = RAZOR_BASE_PATH."storage/database/extension_razorcms_blog.db.php";
-	$blog_item_db = RAZOR_BASE_PATH."storage/database/extension_razorcms_blog_item.db.php";
-	if (!file_exists($blog_db)) copy(RAZOR_BASE_PATH."extension/social/razorcms/blog/default/blog.db.php", $blog_db);
-	if (!file_exists($blog_item_db)) copy(RAZOR_BASE_PATH."extension/social/razorcms/blog/default/blog_item.db.php", $blog_item_db);
+	$blog_db = RAZOR_BASE_PATH."storage/database/social_razorcms_blog.sqlite";
+	if (!file_exists($blog_db)) copy(RAZOR_BASE_PATH."extension/social/razorcms/blog/default/social_razorcms_blog.sqlite", $blog_db);
 
 	// grab settings for this instance of the blog tool
 	$c = json_decode($c_data["json_settings"]);
@@ -31,7 +29,7 @@
 		<div class="blog-view">
 			<div class="row">
 				<div class="col-sm-5">
-					<a class="btn btn-default" href="?" ng-click="viewBlogItem(true)"><i class="fa fa-arrow-left"></i> <?php echo $m["view_blogs_label"] ?></a>
+					<a class="btn btn-default" href="?" ng-click="viewAllItems()"><i class="fa fa-arrow-left"></i> <?php echo $m["view_blogs_label"] ?></a>
 				</div>
 				<div class="blog-edit-controls col-sm-7 text-right">
 					<?php if ($this->logged_in >= CONTRIBUTER): ?>

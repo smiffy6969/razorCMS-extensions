@@ -126,6 +126,11 @@ define(["angular", "cookie-monster", "jquery", "summernote", "ui-bootstrap", "ra
             $scope.newBlogEntry = false;
         };
 
+        $scope.viewAllItems = function()
+        {
+            location.href = "?";
+        }
+
         $scope.createBlogEntry = function()
         {
             // hide multi layout
