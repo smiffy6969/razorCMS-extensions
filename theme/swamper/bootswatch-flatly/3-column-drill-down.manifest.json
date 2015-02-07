@@ -1,0 +1,14 @@
+{
+	"manifest": "3-column-drill-down",
+	"type": "theme",
+	"handle": "swamper",
+	"extension": "bootswatch-flatly",
+	"layout": "3-column-drill-down",
+	"name": "Bootswatch Flatly",
+	"author": "swamper",
+	"version": 1,
+	"created": 1423063917,
+	"description": "Conversion of the Flatly theme from bootswatch.com.",
+	"menus": ["header","footer"],
+	"content": {"header": 1,"main": 4,"footer": 1}
+}

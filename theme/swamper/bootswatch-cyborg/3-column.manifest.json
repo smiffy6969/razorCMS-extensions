@@ -1,0 +1,14 @@
+{
+	"manifest": "3-column",
+	"type": "theme",
+	"handle": "swamper",
+	"extension": "bootswatch-cyborg",
+	"layout": "3-column",
+	"name": "Bootswatch Cyborg",
+	"author": "swamper",
+	"version": 1,
+	"created": 1422989768,
+	"description": "Conversion of the Cyborg theme from bootswatch.com.",
+	"menus": ["header","footer"],
+	"content": {"header": 3,"main": 3,"footer": 3}
+}

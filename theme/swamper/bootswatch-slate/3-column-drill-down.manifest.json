@@ -1,0 +1,14 @@
+{
+	"manifest": "3-column-drill-down",
+	"type": "theme",
+	"handle": "swamper",
+	"extension": "bootswatch-slate",
+	"layout": "3-column-drill-down",
+	"name": "Bootswatch Slate",
+	"author": "swamper",
+	"version": 1,
+	"created": 1422992228,
+	"description": "Conversion of the Slate theme from bootswatch.com.",
+	"menus": ["header","footer"],
+	"content": {"header": 1,"main": 4,"footer": 1}
+}

@@ -1,0 +1,14 @@
+{
+	"manifest": "2-column-main",
+	"type": "theme",
+	"handle": "swamper",
+	"extension": "bootswatch-sandstone",
+	"layout": "2-column-main",
+	"name": "Bootswatch Sandstone",
+	"author": "swamper",
+	"version": 1,
+	"created": 1422992652,
+	"description": "Conversion of the Sandstone theme from bootswatch.com.",
+	"menus": ["header","footer"],
+	"content": {"header": 1,"main": 2,"footer": 1}
+}
