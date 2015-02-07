@@ -6,7 +6,7 @@
 	"layout": "3-column",
 	"name": "Bootswatch Amelia",
 	"author": "smiffy6969",
-	"version": 3,
+	"version": 4,
 	"created": 1394394028,
 	"description": "Conversion of the amelia theme from bootswatch.com.",
 	"menus": ["header","footer"],

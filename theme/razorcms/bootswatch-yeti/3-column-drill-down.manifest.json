@@ -6,7 +6,7 @@
 	"layout": "3-column-drill-down",
 	"name": "Bootswatch Yeti",
 	"author": "smiffy6969",
-	"version": 3,
+	"version": 4,
 	"created": 1394394028,
 	"description": "Conversion of the yeti theme from bootswatch.com.",
 	"menus": ["header","footer"],
