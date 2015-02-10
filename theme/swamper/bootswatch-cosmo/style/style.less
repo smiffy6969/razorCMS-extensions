@@ -1,0 +1,80 @@
+@import url("../../../../../library/style/razor/razor_base.less");
+@import url("variables.less");
+@import url("bootswatch.less");
+
+// overwrite url path for razor base
+@url-path: "../../../../../";
+
+// this is where we put theme specific style
+.navbar-fixed-top { z-index: 900; }
+.navbar-fixed-bottom { z-index: 900; }
+
+body
+{
+	.template-wrapper
+	{
+		padding-top: 60px;
+
+		.template-header
+		{
+			margin-bottom: 10px;
+		}
+
+		.template-main
+		{
+			margin-bottom: 10px;
+		}
+
+		.template-footer
+		{
+			.template-footer-menu
+			{
+				ul
+				{
+					li { display: inline-block; }
+				}
+			}
+		}
+	}
+}
+
+// admin overrides
+.razor-admin, .razor-access
+{
+	.razor-admin-panel
+	{
+		background-color: rgba(255,255,255,0.6);
+	}
+
+	.account-details
+	{
+		color: #444;
+
+		.fa-sign-out { color: #911821; }
+	}
+
+	// push site down due to panel
+	.template-wrapper
+	{
+		padding-top: 60px;
+
+		.template-header-content, .template-main-content, .template-footer-content
+		{
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+	}
+
+	.razor-admin-pages
+	{
+		.accordian
+		{
+			.panel-body
+			{
+				min-height: 352px;
+			}
+		}
+	}
+
+	.ta-editor { color: inherit; }
+}

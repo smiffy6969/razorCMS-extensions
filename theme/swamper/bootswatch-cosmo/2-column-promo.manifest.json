@@ -1,0 +1,14 @@
+{
+	"manifest": "2-column-promo",
+	"type": "theme",
+	"handle": "swamper",
+	"extension": "bootswatch-cosmo",
+	"layout": "2-column-promo",
+	"name": "Bootswatch Cosmo",
+	"author": "swamper",
+	"version": 1,
+	"created": 1423531256,
+	"description": "Conversion of the Cosmo theme from bootswatch.com.",
+	"menus": ["header","footer"],
+	"content": {"header": 1,"main": 3,"footer": 1}
+}
