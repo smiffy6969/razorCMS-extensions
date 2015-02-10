@@ -1,0 +1,14 @@
+{
+	"manifest": "2-column",
+	"type": "theme",
+	"handle": "swamper",
+	"extension": "bootswatch-cerulean",
+	"layout": "2-column",
+	"name": "Bootswatch Cerulean",
+	"author": "swamper",
+	"version": 1,
+	"created": 1423530937,
+	"description": "Conversion of the Cerulean theme from bootswatch.com.",
+	"menus": ["header","footer"],
+	"content": {"header": 2,"main": 2,"footer": 2}
+}
