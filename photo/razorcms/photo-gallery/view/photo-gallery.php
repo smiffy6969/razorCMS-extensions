@@ -7,6 +7,17 @@
 	// get settings or return defaults
 	$m = array();
 	foreach ($manifest->content_settings as $m_set) $m[$m_set->name] = (isset($c->{$m_set->name}) && !empty($c->{$m_set->name}) ? $c->{$m_set->name} : $m_set->value);
+
+	// sort out album folder
+	if (isset($m["album_name"]))
+	{
+		if (!is_dir(RAZOR_BASE_PATH.'storage/files')) mkdir(RAZOR_BASE_PATH.'storage/files');
+		if (!is_dir(RAZOR_BASE_PATH.'storage/files/extension')) mkdir(RAZOR_BASE_PATH.'storage/files/extension');
+		if (!is_dir(RAZOR_BASE_PATH.'storage/files/extension/photo')) mkdir(RAZOR_BASE_PATH.'storage/files/extension/photo');
+		if (!is_dir(RAZOR_BASE_PATH.'storage/files/extension/photo/razorcms')) mkdir(RAZOR_BASE_PATH.'storage/files/extension/photo/razorcms');
+		if (!is_dir(RAZOR_BASE_PATH.'storage/files/extension/photo/razorcms/photo-gallery')) mkdir(RAZOR_BASE_PATH.'storage/files/extension/photo/razorcms/photo-gallery');
+		if (!is_dir(RAZOR_BASE_PATH."storage/files/extension/photo/razorcms/photo-gallery/{$m["album_name"]}")) mkdir(RAZOR_BASE_PATH."storage/files/extension/photo/razorcms/photo-gallery/{$m["album_name"]}");
+	}
 ?>
 
 <!-- module output -->
@@ -29,7 +40,7 @@
 				<img ng-show="photoFrame" ng-src="{{photoFrame.url}}" ng-class="{'turn-photo': turnPhoto}">
 				<i ng-if="!photoFrame" class="fa fa-picture-o photo-placeholder"></i>
 			</div>
-		</div>		
+		</div>
 	</div>
 	<div class="photo-gallery-controls" style="width: <?php echo $m["frame_width"] ?>;">
 		<i class="fa fa-chevron-circle-left photo-control slide-left" ng-click="scrollThumbs('left')"></i>
