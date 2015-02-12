@@ -5,7 +5,7 @@
 	"extension": "photo-gallery",
 	"name": "Photo Gallery",
 	"author": "smiffy6969",
-	"version": 2,
+	"version": 3,
 	"created": 1394394028,
 	"view" : "photo-gallery",
 	"description": "Show photos from a specific folder as a photo gallery slideshow, login with manager or above permissions to add and remove images.",
