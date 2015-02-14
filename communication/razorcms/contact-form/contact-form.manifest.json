@@ -5,13 +5,10 @@
 	"extension": "contact-form",
 	"name": "Contact Form",
 	"author": "smiffy6969",
-	"version": 4,
+	"version": 6,
 	"created": 1394394028,
 	"view" : "contact-form",
 	"description": "Displays a contact form to allow people to email you directly from your website.",
-	"dependancies": [
-		{"type": "rars", "name": "RARS Tools - Email", "path": "rars/api/tools/email.php"}
-	],
 	"settings": [
 		{"name": "email", "placeholder": "Email address to send messages to", "value": ""}
 	]

@@ -19,12 +19,12 @@ define(["angular", "razor/services/rars", ], function(angular)
             $scope.processing = true;
             $scope.error = false;
 
-            rars.post("tools/email", {"signature": $scope.signature, "email": $scope.email, "message": $scope.message, "human": $scope.human, "extension": $scope.extension})
+            rars.post("extension/communication/razorcms/contact-form/email", {"signature": $scope.signature, "email": $scope.email, "message": $scope.message, "human": $scope.human, "extension": $scope.extension})
                 .success(function(data)
                 {
                     $scope.response = true;
                 })
-                .error(function(data, header) 
+                .error(function(data, header)
                 {
                     if (data.response == "robot") $scope.robot = true;
                     else
