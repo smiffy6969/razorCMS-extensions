@@ -9,7 +9,7 @@
 		<meta name="keywords" content="<?php echo $this->page["keywords"] ?>">
 
 		<title><?php echo $this->site["name"] ?>::<?php echo $this->page["title"] ?></title>
-		
+
 		<!-- resolve base URL/IP/U-AGENT for any js applications -->
 		<script type="text/javascript">
 			var RAZOR_BASE_URL = "<?php echo RAZOR_BASE_URL ?>";
@@ -44,7 +44,7 @@
 										<div class="navbar-header">
 											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 												<span class="sr-only">Toggle navigation</span>
-												<i class="fa fa-ellipsis-v"></i>
+												<i class="fa fa-bars"></i>
 											</button>
 											<a class="navbar-brand" href="#"><?php echo $this->site["name"] ?></a>
 										</div>
@@ -55,7 +55,7 @@
 											</ul>
 										</div>
 									</div>
-								</div>	
+								</div>
 							</div>
 						</div>
 					</div>

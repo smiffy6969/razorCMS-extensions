@@ -45,7 +45,7 @@
 										<div class="navbar-header">
 											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 												<span class="sr-only">Toggle navigation</span>
-												<i class="fa fa-ellipsis-v"></i>
+												<i class="fa fa-bars"></i>
 											</button>
 											<a class="navbar-brand" href="#"><?php echo $this->site["name"] ?></a>
 										</div>
@@ -56,7 +56,7 @@
 											</ul>
 										</div>
 									</div>
-								</div>								
+								</div>
 							</div>
 						</div>
 					</div>
